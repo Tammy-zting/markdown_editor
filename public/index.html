@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>react-markdown-editor-lite-master</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
+  <script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.min.js"></script>
+  <script>
+    window.onload = function(){ 
+     
+      let echartsArray = document.getElementsByClassName('echarts')
+      if (echartsArray.length > 0) {
+        let echartsLen = echartsArray.length;
+
+        let echartsData = document.getElementsByClassName('echarts-data')
+        let echartsChart = [];
+        let echartsOption = [];
+        for (let j = 0; j < echartsLen; j++) {
+          echartsChart[j] = echarts.init(echartsArray[j]);
+          echartsOption[j] = JSON.parse(echartsData[j].innerHTML).option;
+          echartsChart[j].setOption(echartsOption[j]);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

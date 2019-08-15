@@ -1,5 +1,3 @@
-[toc]
-
 # react-markdown-editor-lite
 
 * A light-weight(size 69KB) Markdown editor of React component
@@ -16,17 +14,16 @@
 * 支持常用的markdown编辑功能，如加粗，斜体等等...
 * 支持图片上传
 * 支持编辑区和预览区同步滚动
+* 附加功能 
+  - 支持toc   插件 markdown-it-toc-gb
+  - 高亮按钮
+  - 任务清单
+  - 平方
+  - 插入echarts图表 
 
-## Demo
+## 效果图
 
-online demo [https://harrychen0506.github.io/react-markdown-editor-lite/](https://harrychen0506.github.io/react-markdown-editor-lite/)
-![image](https://github.com//HarryChen0506/react-markdown-editor-lite/blob/master/example/react-markdown-editor-lite-v-0-3-6.PNG?raw=true)
-
-## Install
-
-```
-npm install react-markdown-editor-lite --save
-```
+![](./public/markdown.png)
 
 ## Props
 
@@ -66,13 +63,13 @@ npm install markdown-it --save
 
 ## Basic Usage
 
-Use markdown-it as markdown parser
+请看`example`
 
 ```js
 'use strict';
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MdEditor from 'react-markdown-editor-lite'
+import MdEditor from '../src/index.js';
 import MarkdownIt from 'markdown-it'
 
 const MOCK_DATA = "Hello.\n\n * This is markdown.\n * It is fun\n * Love it or leave it."
@@ -105,7 +102,7 @@ export default class Demo extends React.Component {
 'use strict';
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MdEditor from 'react-markdown-editor-lite'
+import MdEditor from '../src/index.js';
 import MarkdownIt from 'markdown-it'
 import emoji from 'markdown-it-emoji'
 import subscript from 'markdown-it-sub'
@@ -243,7 +240,7 @@ export default function() {
 }
 ```
 
-## Authors
+## 参考
 - HarryChen0506 [github/HarryChen0506](https://github.com/HarryChen0506)
 - sylingd [github/sylingd](https://github.com/sylingd)
 
@@ -251,9 +248,4 @@ export default function() {
 
 [MIT](https://github.com/HarryChen0506/react-markdown-editor-lite/blob/master/LICENSE)
 
-附加功能 
-- [x] 支持toc  插件 markdown-it-toc-gb
-- [x] 高亮按钮
-- [x] 任务清单
-- [x] 平方
-- [x] 插入echarts图表 
+

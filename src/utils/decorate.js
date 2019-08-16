@@ -193,7 +193,7 @@ class Decorate {
       case "pie":
         return pieContent
       case "bold":
-        return `**${this.target}\n**`
+        return `**${this.target}**\n`
       case "italic":
         return `*${this.target}*`
       case "underline":

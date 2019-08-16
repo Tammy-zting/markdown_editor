@@ -644,8 +644,8 @@ class MdEditor extends React.Component {
               </span>
               <span className="button" title={'toggle'} onClick={() => this.handleToggleView('html')}><Icon type="icon-refresh" /></span>
               <span className="button" title="HTML code" onClick={this.handleToggleHtmlType}>
-                {htmlType === 'render' ? <Icon type="icon-code" />
-                  : <Icon type="icon-eye" />
+                {htmlType === 'render' ? <Icon type="icon-embed" />
+                  : <Icon type="icon-strikethrough" />
                 }
               </span>
             </ToolBar>
